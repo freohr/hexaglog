@@ -1,0 +1,70 @@
+{
+    "hexaglog": {
+        "mainSheet": {
+            "attribute": {
+                "str": "Strength",
+                "dex": "Dexterity",
+                "con": "Constitution",
+                "int": "Intelligence",
+                "wis": "Wisdom",
+                "cha": "Charisma"
+            },
+            "attributesLabel": "Attributes",
+            "attributeLabel": "Attribute",
+            "skillCheck": "Skill Check",
+            "save": "Save",
+            "inventory": "Inventory",
+            "injuries": {},
+            "armor": "Armor",
+            "actionDie": {
+                "generic": {
+                    "singular": "Action Die",
+                    "plural": "Action Dice"
+                },
+                "skill": {
+                    "singular": "Expertise Die",
+                    "plural": "Expertise Dice"
+                },
+                "fight": {
+                    "singular": "Fighting Die",
+                    "plural": "Fighting Dice"
+                },
+                "magic": {
+                    "singular": "Magic Die",
+                    "plural": "Magic Dice"
+                }
+            }
+        },
+        "items": {
+
+        },
+        "classes": {
+            "class": "Class",
+            "template": "Template",
+            "fighter": {
+                "name": "Fighter",
+                "description": "fighter desc"
+            },
+            "mu": {
+                "name": "Magic User",
+                "description": "magic user desc"
+            },
+            "specialist": {
+                "name": "Specialist",
+                "description": "specialist desc"
+            },
+            "elf": {
+                "name": "Elf",
+                "description": "elf desc"
+            },
+            "dwarf": {
+                "name": "Dwarf",
+                "description": "dwarf desc"
+            },
+            "halfling": {
+                "name": "Halfling",
+                "description": "halfling desc"
+            }
+        }
+    }
+}

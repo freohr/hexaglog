@@ -1,0 +1,108 @@
+.item-form {
+  font-family: $font-primary;
+}
+
+.ability-centering-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hexaglog-sheet-grid {
+  .sheet-header {
+    height: 15%;
+
+    display: grid;
+    grid-template-columns: 10% 1fr 15%;
+    // grid-template-rows: 1fr;
+
+    .column {
+      height: 100%;
+
+      display: grid;
+      grid-auto-columns: 1fr;
+      // grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    .char-desc {
+      grid-template-rows: 1fr 3fr;
+    }
+
+    .char-xp {
+      height: 80%;
+      padding: 5%;
+    }
+  }
+
+  .char-info {
+    width: 100%;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+
+    padding: 8px;
+
+    .left-col {
+      height: 100%;
+      width: 100%;
+
+      text-align: center;
+
+      .left-row {
+        display: grid;
+        grid-template-columns: 1fr repeat(3, 2fr);
+        grid-template-rows: 1fr;
+
+        width: 100%;
+
+        vertical-align: center;
+
+        input {
+          width: 80%;
+          height: 25px;
+          font-family: "Averia Libre";
+          background: none;
+          border-radius: 5px;
+          text-align: center;
+        }
+      }
+    }
+
+    .middle-col {
+      height: 100%;
+      width: 100%;
+
+      text-align: center;
+    }
+
+    .right-col {
+      height: 100%;
+      width: 100%;
+
+      text-align: center;
+    }
+  }
+}
+
+.sheet-tabs {
+  flex: 0;
+}
+
+.sheet-body,
+.sheet-body .tab,
+.sheet-body .tab .editor {
+  height: 100%;
+}
+
+.tox {
+  .tox-editor-container {
+    background: $c-white;
+  }
+
+  .tox-edit-area {
+    padding: 0 8px;
+  }
+}

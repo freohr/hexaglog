@@ -1,0 +1,108 @@
+{
+    "Actor":{
+        "types":[
+            "player",
+            "hireling",
+            "monster"
+        ],
+        "templates" : {
+            "character": {
+                "armor": 1
+            },
+            "npc": {
+                "morale": {
+                    "value": 10,
+                    "min": 2,
+                    "max": 20
+                },
+                "hit-dice": 1
+            }
+        },
+        "player": {
+            "templates":["character"],
+            "xp":
+            {
+                "level": 1,
+                "current": 0
+            },
+            "attributes":
+            {
+              "str":
+              {
+                "value": 3,
+                "max":10
+              },
+              "dex":
+              {
+                "value": 0,
+                "max":10
+              },
+              "con":
+              {
+                "value": 0,
+                "max":10
+              },
+              "int":
+              {
+                "value": 0,
+                "max":10
+              },
+              "wis":
+              {
+                "value": 0,
+                "max":10
+              },
+              "cha":
+              {
+                "value": 0,
+                "max":10
+              }
+            }
+        },
+        "hireling":{
+            "templates": ["character", "npc"]
+        },
+        "monster":{
+            "templates": ["character", "npc"]
+        }   
+    },
+    "Item":{
+        "types": [
+            "weapon",
+            "consumable",
+            "tool",
+            "armor",
+            "treasure"
+        ],
+        "templates":{
+            "item":{
+                "description":"",
+                "weight":1,
+                "value":0
+            },
+            "gear":{
+                "durability":3
+            }
+        },
+        "weapon": {
+            "templates":["item", "gear"],
+            "injuryRoll": "d12",
+            "hitBonus": 0
+        },
+        "armor": {
+            "templates": ["item", "gear"],
+            "armorBonus": 2
+        },
+        "consumable": {
+            "templates":["item"],
+            "quantityMax":0,
+            "quantityRemaining":0
+        },
+        "tool": {
+            "templates":["item", "gear"]
+        },
+        "treasure": {
+            "templates":["item"]            
+        }
+    }
+}

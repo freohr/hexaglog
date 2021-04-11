@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;800&family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+/* Global styles */
+.window-app {
+  font-family: "Averia Libre", sans-serif; }
+  .window-app .window-content {
+    width: 100%;
+    height: 100%;
+    padding: 2; }
+
+.clickable:hover, .clickable:focus {
+  color: #000;
+  text-shadow: 0 0 10px red;
+  cursor: pointer; }
+
+.grid,
+.grid-2col {
+  display: grid;
+  grid-column: span 2 / span 2;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 10px 0;
+  padding: 0; }
+
+.grid-3col {
+  grid-column: span 3 / span 3;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.grid-4col {
+  grid-column: span 4 / span 4;
+  grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+.grid-5col {
+  grid-column: span 5 / span 5;
+  grid-template-columns: repeat(5, minmax(0, 1fr)); }
+
+.grid-6col {
+  grid-column: span 5 / span 5;
+  grid-template-columns: repeat(5, minmax(0, 1fr)); }
+
+.grid-7col {
+  grid-column: span 7 / span 7;
+  grid-template-columns: repeat(7, minmax(0, 1fr)); }
+
+.grid-8col {
+  grid-column: span 8 / span 8;
+  grid-template-columns: repeat(8, minmax(0, 1fr)); }
+
+.grid-9col {
+  grid-column: span 9 / span 9;
+  grid-template-columns: repeat(9, minmax(0, 1fr)); }
+
+.grid-10col {
+  grid-column: span 10 / span 10;
+  grid-template-columns: repeat(10, minmax(0, 1fr)); }
+
+.grid-11col {
+  grid-column: span 11 / span 11;
+  grid-template-columns: repeat(11, minmax(0, 1fr)); }
+
+.grid-12col {
+  grid-column: span 12 / span 12;
+  grid-template-columns: repeat(12, minmax(0, 1fr)); }
+
+.flex-group-center,
+.flex-group-left,
+.flex-group-right {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #999; }
+
+.flex-group-left {
+  justify-content: flex-start;
+  text-align: left; }
+
+.flex-group-right {
+  justify-content: flex-end;
+  text-align: right; }
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+
+.flex-between {
+  justify-content: space-between; }
+
+/* Styles limited to hexaglog sheets */
+.hexaglog .item-form {
+  font-family: "Averia Libre", sans-serif; }
+
+.hexaglog .ability-centering-box {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.hexaglog .hexaglog-sheet-grid .sheet-header {
+  height: 15%;
+  display: grid;
+  grid-template-columns: 10% 1fr 15%; }
+  .hexaglog .hexaglog-sheet-grid .sheet-header .column {
+    height: 100%;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr); }
+  .hexaglog .hexaglog-sheet-grid .sheet-header .char-desc {
+    grid-template-rows: 1fr 3fr; }
+  .hexaglog .hexaglog-sheet-grid .sheet-header .char-xp {
+    height: 80%;
+    padding: 5%; }
+
+.hexaglog .hexaglog-sheet-grid .char-info {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  padding: 8px; }
+  .hexaglog .hexaglog-sheet-grid .char-info .left-col {
+    height: 100%;
+    width: 100%;
+    text-align: center; }
+    .hexaglog .hexaglog-sheet-grid .char-info .left-col .left-row {
+      display: grid;
+      grid-template-columns: 1fr repeat(3, 2fr);
+      grid-template-rows: 1fr;
+      width: 100%;
+      vertical-align: center; }
+      .hexaglog .hexaglog-sheet-grid .char-info .left-col .left-row input {
+        width: 80%;
+        height: 25px;
+        font-family: "Averia Libre";
+        background: none;
+        border-radius: 5px;
+        text-align: center; }
+  .hexaglog .hexaglog-sheet-grid .char-info .middle-col {
+    height: 100%;
+    width: 100%;
+    text-align: center; }
+  .hexaglog .hexaglog-sheet-grid .char-info .right-col {
+    height: 100%;
+    width: 100%;
+    text-align: center; }
+
+.hexaglog .sheet-tabs {
+  flex: 0; }
+
+.hexaglog .sheet-body,
+.hexaglog .sheet-body .tab,
+.hexaglog .sheet-body .tab .editor {
+  height: 100%; }
+
+.hexaglog .tox .tox-editor-container {
+  background: #fff; }
+
+.hexaglog .tox .tox-edit-area {
+  padding: 0 8px; }
+
+.hexaglog .resource-label {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.hexaglog .tabs {
+  height: 40px;
+  border-top: 1px solid #AAA;
+  border-bottom: 1px solid #AAA; }
+  .hexaglog .tabs .item {
+    line-height: 40px;
+    font-weight: bold; }
+  .hexaglog .tabs .item.active {
+    text-decoration: underline;
+    text-shadow: none; }
+
+.hexaglog .items-list {
+  list-style: none;
+  margin: 7px 0;
+  padding: 0;
+  overflow-y: auto; }
+  .hexaglog .items-list .item-header {
+    font-weight: bold; }
+  .hexaglog .items-list .item {
+    height: 30px;
+    line-height: 24px;
+    padding: 3px 0;
+    border-bottom: 1px solid #BBB; }
+    .hexaglog .items-list .item .item-image {
+      flex: 0 0 24px;
+      margin-right: 5px; }
+    .hexaglog .items-list .item img {
+      display: block; }
+  .hexaglog .items-list .item-name {
+    margin: 0; }
+  .hexaglog .items-list .item-controls {
+    flex: 0 0 86px;
+    text-align: right; }
+
+.monster-sheet {
+  background-color: blue; }

@@ -1,0 +1,61 @@
+<form class="{{cssClass}} hexaglog-sheet-grid" autocomplete="off">
+  <header class="sheet-header">
+    <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64" />
+    <div class="char-desc column">
+      <h2><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h2>
+      <p>Your own info :D</p>
+    </div>
+    <div class="char-xp column">
+      <span><b>Level:</b> {{data.xp.level}}</span>
+      <span>XP: {{data.xp.current}}</span>
+    </div>
+  </header>
+
+  <section class="char-info">
+
+    <!-- Attributes -->
+    <section class="left-col">
+      <div class="header-row">
+        <p>{{localize "hexaglog.mainSheet.attributesLabel"}}</p>
+        <span class="generate-character clickable">Generate!</span>
+      </div>
+
+      {{#each data.attributes as |attr key|}}
+      <div class="left-row">
+        <div class="ability-centering-box">
+          <p>{{toUpperCase key}}</p>
+        </div>
+
+        <div class="ability-centering-box">
+          <input class="attribute-bonus" name="{{localize key}}" value="{{attr.value}}" data-dtype="Number" />
+        </div>
+
+        <div class="ability-centering-box">
+          <span class="attribute-bonus clickable rollable" data-roll="2d10+@attributes.{{key}}.value"
+            data-label="a {{toUpperCase key}} skill check ">
+            {{localize "hexaglog.mainSheet.skillCheck"}}
+          </span>
+        </div>
+        <div class="ability-centering-box">
+          <span class="attribute-bonus clickable rollable" data-roll="d20+@attributes.{{key}}.value"
+            data-label="a {{toUpperCase key}} save">
+            {{localize "hexaglog.mainSheet.save"}}
+          </span>
+        </div>
+      </div>
+      {{/each}}
+
+    </section>
+
+    <!-- Inventory -->
+    <section class="middle-col">
+      <div class="header-row">{{localize "hexaglog.mainSheet.inventory"}}</div>
+    </section>
+
+    <!-- Class Templates -->
+    <section class="right-col">
+      <div class="header-row">{{localize "hexaglog.classes.class"}} {{localize "hexaglog.classes.template"}}</div>
+      <p>Stuff in the right col</p>
+    </section>
+  </section>
+</form>

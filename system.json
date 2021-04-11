@@ -1,0 +1,31 @@
+{
+    "name": "hexaglog",
+    "title": "HexaGLOG",
+    "description": "A GLOG hack",
+    "author": "Freohr",
+    "version": "0.0.0",
+    "minimumCoreVersion": "0.7.9",
+    "compatibleCoreVersion": "0.7.9",
+    "esmodules" :
+    [
+        "hexaglog.js"
+    ],
+    "styles":[
+        "hexaglog.css"
+    ],
+    "packs" :[],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        },
+        {
+            "lang": "fr",
+            "name": "Français",
+            "path": "lang/fr.json"
+        }
+    ],
+    "gridDistance": 10,
+    "gridUnits": "ft"
+}

@@ -1,0 +1,14 @@
+{
+    "hexaglog": {
+        "item": {
+            "description": "Description",
+            "weight": "Poids",
+            "value": "Valeur",
+            "durability": ""
+        },
+        "weapon": {
+            "injury": "Blessure",
+            "hitBonus": "Bonus de toucher"
+        }
+    }
+}
